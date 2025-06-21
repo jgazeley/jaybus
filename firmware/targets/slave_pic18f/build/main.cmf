@@ -1,0 +1,326 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build\startup.o
+init CODE 0 1FFC 1FFC 4 1 2
+reset_vec CODE 0 0 0 6 1 2
+config CONFIG 4 300000 300000 8 1 1
+$build\main.o
+cinit CODE 0 1B6 1B6 A 1 2
+text0 CODE 0 102 102 54 1 2
+text1 CODE 0 18E 18E 28 1 2
+text2 CODE 0 156 156 38 1 2
+text3 CODE 0 1C0 1C0 2 1 2
+cstackCOMRAM COMRAM 1 1 1 6 1 1
+smallconst SMALLCONST 0 100 100 2 1 2
+config CONFIG 4 300000 300000 8 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 80-FF 1
+SFR F80-FFF 1
+BANK0 80-FF 1
+CONST 6-FF 1
+CONST 1C2-1FFB 1
+IDLOC 200000-200007 1
+SMALLCONST 1C2-1FFB 1
+CODE 6-FF 1
+CODE 1C2-1FFB 1
+BIGRAM 7-FF 1
+BIGSFR F80-FFF 1
+COMRAM 7-7F 1
+CONFIG 300008-30000D 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 1C2-1FFB 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build\startup.o
+1FFC init CODE >103:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\startup.s
+0 reset_vec CODE >62:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\startup.s
+2 reset_vec CODE >67:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\startup.s
+$build\main.o
+1C0 text3 CODE >13:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+1C0 text3 CODE >15:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+156 text2 CODE >17:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+158 text2 CODE >19:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+15A text2 CODE >21:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+174 text2 CODE >22:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+176 text2 CODE >23:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+180 text2 CODE >23:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+188 text2 CODE >23:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+18E text1 CODE >26:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+190 text1 CODE >28:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+192 text1 CODE >29:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+192 text1 CODE >30:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+19C text1 CODE >31:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+19E text1 CODE >32:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+1A8 text1 CODE >32:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+1B0 text1 CODE >32:D:\Desktop\jaybus\firmware\targets\slave_pic18f\hal\hal_pic18f.c
+102 text0 CODE >6:D:\Desktop\jaybus\firmware\targets\slave_pic18f\app\main.c
+102 text0 CODE >9:D:\Desktop\jaybus\firmware\targets\slave_pic18f\app\main.c
+106 text0 CODE >12:D:\Desktop\jaybus\firmware\targets\slave_pic18f\app\main.c
+10A text0 CODE >16:D:\Desktop\jaybus\firmware\targets\slave_pic18f\app\main.c
+114 text0 CODE >23:D:\Desktop\jaybus\firmware\targets\slave_pic18f\app\main.c
+11E text0 CODE >24:D:\Desktop\jaybus\firmware\targets\slave_pic18f\app\main.c
+134 text0 CODE >25:D:\Desktop\jaybus\firmware\targets\slave_pic18f\app\main.c
+13E text0 CODE >26:D:\Desktop\jaybus\firmware\targets\slave_pic18f\app\main.c
+1B6 cinit CODE >580:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\main.s
+1B6 cinit CODE >582:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\main.s
+1B6 cinit CODE >585:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\main.s
+1B6 cinit CODE >591:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\main.s
+1B6 cinit CODE >594:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\main.s
+1B8 cinit CODE >595:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\main.s
+1BA cinit CODE >596:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\main.s
+1BC cinit CODE >597:D:\Desktop\jaybus\firmware\targets\slave_pic18f\build\main.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst build\main.o
+__Hspace_0 2000 0 ABS 0 - build\main.o
+__Hspace_1 7 0 ABS 0 - build\main.o
+__Hspace_2 0 0 ABS 0 - build\main.o
+__Hspace_4 600008 0 ABS 0 - build\main.o
+GPIO_WritePin@pin 4 0 COMRAM 1 cstackCOMRAM build\main.o
+__Hibigdata 0 0 CODE 0 ibigdata build\main.o
+__mediumconst 100 0 SMALLCONST 0 smallconst build\main.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data build\main.o
+__L__absolute__ 0 0 ABS 0 __absolute__ build\main.o
+__Lsmallconst 100 0 SMALLCONST 0 smallconst build\main.o
+___sp 0 0 STACK 2 stack build\startup.o
+_main 102 0 CODE 0 text0 build\main.o
+___stack_hi 0 0 STACK 2 stack build\startup.o
+___stack_lo 0 0 STACK 2 stack build\startup.o
+start 1FFC 0 CODE 0 init build\startup.o
+__Hpowerup 0 0 CODE 0 powerup build\main.o
+__accesstop 80 0 ABS 0 - build\startup.o
+intlevel0 0 0 CODE 0 text build\startup.o
+intlevel1 0 0 CODE 0 text build\startup.o
+intlevel2 0 0 CODE 0 text build\startup.o
+intlevel3 0 0 CODE 0 text build\startup.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM build\main.o
+__Hifardata 0 0 CODE 0 ifardata build\main.o
+__Hclrtext 0 0 ABS 0 clrtext build\main.o
+___inthi_sp 0 0 STACK 2 stack build\startup.o
+___intlo_sp 0 0 STACK 2 stack build\startup.o
+__Hintcode_body 0 0 ABS 0 intcode_body build\main.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs build\main.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst build\main.o
+__Hintcodelo 18 0 CODE 0 intcodelo build\main.o
+__Lintcodelo 18 0 CODE 0 intcodelo build\main.o
+start_initialization 1B6 0 CODE 0 cinit build\main.o
+_OSCCON FD3 0 ABS 0 - build\main.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM build\main.o
+_TRISAbits F92 0 ABS 0 - build\main.o
+___rparam_used 1 0 ABS 0 - build\main.o
+GPIO_SetPinMode@pin 4 0 COMRAM 1 cstackCOMRAM build\main.o
+isa$xinst 0 0 ABS 0 - build\startup.o
+__Hbank0 0 0 ABS 0 bank0 build\main.o
+__Hcinit 0 0 ABS 0 cinit build\main.o
+__Hconst 0 0 CONST 0 const build\main.o
+__Hidata 0 0 CODE 0 idata build\main.o
+__Hidloc 0 0 ABS 0 idloc build\main.o
+_GPIO_WritePin 18E 0 CODE 0 text1 build\main.o
+__Hnvbit 0 0 COMRAM 1 nvbit build\main.o
+__Hparam 0 0 COMRAM 1 rparam build\main.o
+__Hrdata 0 0 COMRAM 1 rdata build\main.o
+__Hstack 0 0 STACK 2 stack build\main.o
+__Htext0 0 0 ABS 0 text0 build\main.o
+__Htext1 0 0 ABS 0 text1 build\main.o
+__Htext2 0 0 ABS 0 text2 build\main.o
+__Htext3 0 0 ABS 0 text3 build\main.o
+__Hbigbss 0 0 BIGRAM 1 bigbss build\main.o
+__Hbigram 0 0 ABS 0 bigram build\main.o
+__Hbigsfr 0 0 ABS 0 bigsfr build\main.o
+__smallconst 100 0 SMALLCONST 0 smallconst build\main.o
+__Hcomram 0 0 ABS 0 comram build\main.o
+__Hconfig 300008 0 CONFIG 4 config build\main.o
+__Lbank0 0 0 ABS 0 bank0 build\main.o
+__Lcinit 0 0 ABS 0 cinit build\main.o
+__Lconst 0 0 CONST 0 const build\main.o
+__Lidata 0 0 CODE 0 idata build\main.o
+__Lidloc 0 0 ABS 0 idloc build\main.o
+__Lnvbit 0 0 COMRAM 1 nvbit build\main.o
+__Lparam 0 0 COMRAM 1 rparam build\main.o
+__Lrdata 0 0 COMRAM 1 rdata build\main.o
+__Lstack 0 0 STACK 2 stack build\main.o
+__Ltext0 0 0 ABS 0 text0 build\main.o
+__Ltext1 0 0 ABS 0 text1 build\main.o
+__Ltext2 0 0 ABS 0 text2 build\main.o
+__Ltext3 0 0 ABS 0 text3 build\main.o
+__Hfarbss 0 0 FARRAM 0 farbss build\main.o
+__Lintcode_body 0 0 ABS 0 intcode_body build\main.o
+GPIO_WritePin@state 1 0 COMRAM 1 cstackCOMRAM build\main.o
+__Habs1 0 0 ABS 0 abs1 build\main.o
+__Hdata 0 0 ABS 0 data build\main.o
+__Hheap 0 0 HEAP 7 heap build\main.o
+__Hinit 2000 0 CODE 0 init build\main.o
+__Hrbit 0 0 COMRAM 1 rbit build\main.o
+__Hrbss 0 0 COMRAM 1 rbss build\main.o
+__Htemp 0 0 COMRAM 1 temp build\main.o
+__Htext 0 0 ABS 0 text build\main.o
+__Labs1 0 0 ABS 0 abs1 build\main.o
+__Ldata 0 0 ABS 0 data build\main.o
+__Lheap 0 0 HEAP 7 heap build\main.o
+__Linit 1FFC 0 CODE 0 init build\main.o
+__Lrbit 0 0 COMRAM 1 rbit build\main.o
+__Lrbss 0 0 COMRAM 1 rbss build\main.o
+__Ltemp 0 0 COMRAM 1 temp build\main.o
+__Ltext 0 0 ABS 0 text build\main.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM build\main.o
+__Hintret 0 0 ABS 0 intret build\main.o
+__Hirdata 0 0 CODE 0 irdata build\main.o
+__S0 2000 0 ABS 0 - build\main.o
+__S1 7 0 ABS 0 - build\main.o
+__S4 0 0 ABS 0 - build\main.o
+__S5 0 0 ABS 0 - build\main.o
+__end_of_GPIO_Init 1C2 0 CODE 0 text3 build\main.o
+__Lbigdata 0 0 BIGRAM 1 bigdata build\main.o
+__Hnvrram 0 0 COMRAM 1 nvrram build\main.o
+_GPIO_Init 1C0 0 CODE 0 text3 build\main.o
+__end_of_GPIO_SetPinMode 18E 0 CODE 0 text2 build\main.o
+__Lintentry 0 0 ABS 0 intentry build\main.o
+__Hramtop 100 0 RAM 0 ramtop build\main.o
+__Hrparam 0 0 COMRAM 1 rparam build\main.o
+__activetblptr 2 0 ABS 0 - build\main.o
+__Hstruct 0 0 COMRAM 1 struct build\main.o
+__Lbigbss 0 0 BIGRAM 1 bigbss build\main.o
+__Lbigram 0 0 ABS 0 bigram build\main.o
+__Lbigsfr 0 0 ABS 0 bigsfr build\main.o
+__Lcomram 0 0 ABS 0 comram build\main.o
+__Lconfig 0 0 CONFIG 4 config build\main.o
+_LATAbits F89 0 ABS 0 - build\main.o
+__Lsivt_hi 0 0 CODE 0 sivt_hi build\main.o
+__Lsivt_lo 18 0 CODE 0 sivt_lo build\main.o
+__Lfarbss 0 0 FARRAM 0 farbss build\main.o
+___inthi_stack_hi 0 0 STACK 2 stack build\startup.o
+___inthi_stack_lo 0 0 STACK 2 stack build\startup.o
+__Lfardata 0 0 FARRAM 0 fardata build\main.o
+isa$std 1 0 ABS 0 - build\startup.o
+_GPIO_SetPinMode 156 0 CODE 0 text2 build\main.o
+stackhi 0 0 ABS 0 - build\startup.o
+stacklo 0 0 ABS 0 - build\startup.o
+__Lintcode 8 0 CODE 0 intcode build\main.o
+__end_of_GPIO_WritePin 1B6 0 CODE 0 text1 build\main.o
+__Lintret 0 0 ABS 0 intret build\main.o
+__Lirdata 0 0 CODE 0 irdata build\main.o
+__Lspace_0 0 0 ABS 0 - build\main.o
+__Lspace_1 0 0 ABS 0 - build\main.o
+__Lspace_2 0 0 ABS 0 - build\main.o
+__Lspace_4 0 0 ABS 0 - build\main.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM build\main.o
+end_of_initialization 1B6 0 CODE 0 cinit build\main.o
+__Lnvrram 0 0 COMRAM 1 nvrram build\main.o
+__Hintentry 0 0 ABS 0 intentry build\main.o
+__Hreset_vec 6 0 CODE 0 reset_vec build\main.o
+__Lramtop 100 0 RAM 0 ramtop build\main.o
+__Lrparam 0 0 COMRAM 1 rparam build\main.o
+GPIO_SetPinMode@mode 1 0 COMRAM 1 cstackCOMRAM build\main.o
+__pcinit 1B6 0 CODE 0 cinit build\main.o
+__ptext0 102 0 CODE 0 text0 build\main.o
+__ptext1 18E 0 CODE 0 text1 build\main.o
+__ptext2 156 0 CODE 0 text2 build\main.o
+__ptext3 1C0 0 CODE 0 text3 build\main.o
+__Lstruct 0 0 COMRAM 1 struct build\main.o
+__ramtop 100 0 RAM 0 ramtop build\startup.o
+__Lpowerup 0 0 CODE 0 powerup build\main.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data build\main.o
+__H__absolute__ 0 0 ABS 0 __absolute__ build\main.o
+__psmallconst 100 0 SMALLCONST 0 smallconst build\main.o
+__Lreset_vec 0 0 CODE 0 reset_vec build\main.o
+___heap_hi 0 0 ABS 0 - build\startup.o
+___heap_lo 0 0 ABS 0 - build\startup.o
+___param_bank 0 0 ABS 0 - build\main.o
+___intlo_stack_hi 0 0 STACK 2 stack build\startup.o
+___intlo_stack_lo 0 0 STACK 2 stack build\startup.o
+__Hbigdata 0 0 BIGRAM 1 bigdata build\main.o
+__end_of__initialization 1B6 0 CODE 0 cinit build\main.o
+__Libigdata 0 0 CODE 0 ibigdata build\main.o
+__Lclrtext 0 0 ABS 0 clrtext build\main.o
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM build\main.o
+__end_of_main 156 0 CODE 0 text0 build\main.o
+__HRAM 0 0 ABS 0 - build\main.o
+__Hbss 0 0 RAM 1 bss build\main.o
+__Hram 0 0 ABS 0 ram build\main.o
+__Hsfr 0 0 ABS 0 sfr build\main.o
+__LRAM 1 0 ABS 0 - build\main.o
+__Lbss 0 0 RAM 1 bss build\main.o
+__Lram 0 0 ABS 0 ram build\main.o
+__Lsfr 0 0 ABS 0 sfr build\main.o
+__Hsivt_hi 0 0 CODE 0 sivt_hi build\main.o
+__Hsivt_lo 18 0 CODE 0 sivt_lo build\main.o
+__initialization 1B6 0 CODE 0 cinit build\main.o
+__Hfardata 0 0 FARRAM 0 fardata build\main.o
+__Hsmallconst 102 0 SMALLCONST 0 smallconst build\main.o
+__Lifardata 0 0 CODE 0 ifardata build\main.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs build\main.o
+__Hintcode 8 0 CODE 0 intcode build\main.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text0 0 102 102 C0 1
+cstackCOMRAM 1 1 1 6 1
+init 0 1FFC 1FFC 4 1
+reset_vec 0 0 0 6 1
+smallconst 0 100 100 2 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

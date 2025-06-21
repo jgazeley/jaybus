@@ -1,0 +1,283 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"3421 C:\Program Files\Microchip\xc8\v3.00\pic\include\proc/pic18f1320.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"26 app/../../../common/hal/hal_gpio.h
+[v _GPIO_Init `(v ~T0 @X0 0 ef ]
+"16 app\main.c
+[c E1834 0 .. ]
+[n E1834 . STATUS_LED_PIN  ]
+[c E1837 0 1 .. ]
+[n E1837 . GPIO_MODE_OUTPUT GPIO_MODE_INPUT  ]
+"27 app/../../../common/hal/hal_gpio.h
+[v _GPIO_SetPinMode `(v ~T0 @X0 0 ef2`E1834`E1837 ]
+"23 app\main.c
+[c E1841 0 1 .. ]
+[n E1841 . GPIO_STATE_LOW GPIO_STATE_HIGH  ]
+"28 app/../../../common/hal/hal_gpio.h
+[v _GPIO_WritePin `(v ~T0 @X0 0 ef2`E1834`E1841 ]
+[v F205 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
+[v __delay `JF205 ~T0 @X0 0 e ]
+[p i __delay ]
+"8 app/../hal/config.h
+[p x OSC  =  INTIO2       ]
+"9
+[p x WDT  =  OFF          ]
+"10
+[p x MCLRE  =  OFF        ]
+"11
+[p x LVP  =  OFF          ]
+"52 C:\Program Files\Microchip\xc8\v3.00\pic\include\proc/pic18f1320.h
+[; <" PORTA equ 0F80h ;# ">
+"244
+[; <" PORTB equ 0F81h ;# ">
+"492
+[; <" LATA equ 0F89h ;# ">
+"594
+[; <" LATB equ 0F8Ah ;# ">
+"706
+[; <" TRISA equ 0F92h ;# ">
+"711
+[; <" DDRA equ 0F92h ;# ">
+"908
+[; <" TRISB equ 0F93h ;# ">
+"913
+[; <" DDRB equ 0F93h ;# ">
+"1130
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"1188
+[; <" PIE1 equ 0F9Dh ;# ">
+"1254
+[; <" PIR1 equ 0F9Eh ;# ">
+"1320
+[; <" IPR1 equ 0F9Fh ;# ">
+"1386
+[; <" PIE2 equ 0FA0h ;# ">
+"1427
+[; <" PIR2 equ 0FA1h ;# ">
+"1468
+[; <" IPR2 equ 0FA2h ;# ">
+"1509
+[; <" EECON1 equ 0FA6h ;# ">
+"1575
+[; <" EECON2 equ 0FA7h ;# ">
+"1582
+[; <" EEDATA equ 0FA8h ;# ">
+"1589
+[; <" EEADR equ 0FA9h ;# ">
+"1596
+[; <" BAUDCTL equ 0FAAh ;# ">
+"1660
+[; <" RCSTA equ 0FABh ;# ">
+"1665
+[; <" RCSTA1 equ 0FABh ;# ">
+"1870
+[; <" TXSTA equ 0FACh ;# ">
+"1875
+[; <" TXSTA1 equ 0FACh ;# ">
+"2126
+[; <" TXREG equ 0FADh ;# ">
+"2131
+[; <" TXREG1 equ 0FADh ;# ">
+"2138
+[; <" RCREG equ 0FAEh ;# ">
+"2143
+[; <" RCREG1 equ 0FAEh ;# ">
+"2150
+[; <" SPBRG equ 0FAFh ;# ">
+"2155
+[; <" SPBRG1 equ 0FAFh ;# ">
+"2162
+[; <" SPBRGH equ 0FB0h ;# ">
+"2169
+[; <" T3CON equ 0FB1h ;# ">
+"2281
+[; <" TMR3 equ 0FB2h ;# ">
+"2288
+[; <" TMR3L equ 0FB2h ;# ">
+"2295
+[; <" TMR3H equ 0FB3h ;# ">
+"2302
+[; <" ECCPAS equ 0FB6h ;# ">
+"2384
+[; <" PWM1CON equ 0FB7h ;# ">
+"2454
+[; <" CCP1CON equ 0FBDh ;# ">
+"2551
+[; <" CCPR1 equ 0FBEh ;# ">
+"2558
+[; <" CCPR1L equ 0FBEh ;# ">
+"2565
+[; <" CCPR1H equ 0FBFh ;# ">
+"2572
+[; <" ADCON2 equ 0FC0h ;# ">
+"2643
+[; <" ADCON1 equ 0FC1h ;# ">
+"2728
+[; <" ADCON0 equ 0FC2h ;# ">
+"2868
+[; <" ADRES equ 0FC3h ;# ">
+"2875
+[; <" ADRESL equ 0FC3h ;# ">
+"2882
+[; <" ADRESH equ 0FC4h ;# ">
+"2889
+[; <" T2CON equ 0FCAh ;# ">
+"2960
+[; <" PR2 equ 0FCBh ;# ">
+"2965
+[; <" MEMCON equ 0FCBh ;# ">
+"3070
+[; <" TMR2 equ 0FCCh ;# ">
+"3077
+[; <" T1CON equ 0FCDh ;# ">
+"3182
+[; <" TMR1 equ 0FCEh ;# ">
+"3189
+[; <" TMR1L equ 0FCEh ;# ">
+"3196
+[; <" TMR1H equ 0FCFh ;# ">
+"3203
+[; <" RCON equ 0FD0h ;# ">
+"3330
+[; <" WDTCON equ 0FD1h ;# ">
+"3358
+[; <" LVDCON equ 0FD2h ;# ">
+"3423
+[; <" OSCCON equ 0FD3h ;# ">
+"3506
+[; <" T0CON equ 0FD5h ;# ">
+"3583
+[; <" TMR0 equ 0FD6h ;# ">
+"3590
+[; <" TMR0L equ 0FD6h ;# ">
+"3597
+[; <" TMR0H equ 0FD7h ;# ">
+"3604
+[; <" STATUS equ 0FD8h ;# ">
+"3675
+[; <" FSR2 equ 0FD9h ;# ">
+"3682
+[; <" FSR2L equ 0FD9h ;# ">
+"3689
+[; <" FSR2H equ 0FDAh ;# ">
+"3696
+[; <" PLUSW2 equ 0FDBh ;# ">
+"3703
+[; <" PREINC2 equ 0FDCh ;# ">
+"3710
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"3717
+[; <" POSTINC2 equ 0FDEh ;# ">
+"3724
+[; <" INDF2 equ 0FDFh ;# ">
+"3731
+[; <" BSR equ 0FE0h ;# ">
+"3738
+[; <" FSR1 equ 0FE1h ;# ">
+"3745
+[; <" FSR1L equ 0FE1h ;# ">
+"3752
+[; <" FSR1H equ 0FE2h ;# ">
+"3759
+[; <" PLUSW1 equ 0FE3h ;# ">
+"3766
+[; <" PREINC1 equ 0FE4h ;# ">
+"3773
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"3780
+[; <" POSTINC1 equ 0FE6h ;# ">
+"3787
+[; <" INDF1 equ 0FE7h ;# ">
+"3794
+[; <" WREG equ 0FE8h ;# ">
+"3806
+[; <" FSR0 equ 0FE9h ;# ">
+"3813
+[; <" FSR0L equ 0FE9h ;# ">
+"3820
+[; <" FSR0H equ 0FEAh ;# ">
+"3827
+[; <" PLUSW0 equ 0FEBh ;# ">
+"3834
+[; <" PREINC0 equ 0FECh ;# ">
+"3841
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"3848
+[; <" POSTINC0 equ 0FEEh ;# ">
+"3855
+[; <" INDF0 equ 0FEFh ;# ">
+"3862
+[; <" INTCON3 equ 0FF0h ;# ">
+"3954
+[; <" INTCON2 equ 0FF1h ;# ">
+"4031
+[; <" INTCON equ 0FF2h ;# ">
+"4162
+[; <" PROD equ 0FF3h ;# ">
+"4169
+[; <" PRODL equ 0FF3h ;# ">
+"4176
+[; <" PRODH equ 0FF4h ;# ">
+"4183
+[; <" TABLAT equ 0FF5h ;# ">
+"4192
+[; <" TBLPTR equ 0FF6h ;# ">
+"4199
+[; <" TBLPTRL equ 0FF6h ;# ">
+"4206
+[; <" TBLPTRH equ 0FF7h ;# ">
+"4213
+[; <" TBLPTRU equ 0FF8h ;# ">
+"4222
+[; <" PCLAT equ 0FF9h ;# ">
+"4229
+[; <" PC equ 0FF9h ;# ">
+"4236
+[; <" PCL equ 0FF9h ;# ">
+"4243
+[; <" PCLATH equ 0FFAh ;# ">
+"4250
+[; <" PCLATU equ 0FFBh ;# ">
+"4257
+[; <" STKPTR equ 0FFCh ;# ">
+"4363
+[; <" TOS equ 0FFDh ;# ">
+"4370
+[; <" TOSL equ 0FFDh ;# ">
+"4377
+[; <" TOSH equ 0FFEh ;# ">
+"4384
+[; <" TOSU equ 0FFFh ;# ">
+[v $root$_main `(v ~T0 @X0 0 e ]
+"6 app\main.c
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"9
+[e = _OSCCON -> -> 112 `i `uc ]
+"12
+[e ( _GPIO_Init ..  ]
+"16
+[e ( _GPIO_SetPinMode (2 , . `E1834 0 . `E1837 0 ]
+"19
+[e :U 204 ]
+{
+"23
+[e ( _GPIO_WritePin (2 , . `E1834 0 . `E1841 1 ]
+"24
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"25
+[e ( _GPIO_WritePin (2 , . `E1834 0 . `E1841 0 ]
+"26
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"27
+}
+[e :U 203 ]
+[e $U 204  ]
+[e :U 205 ]
+"28
+[e :UE 202 ]
+}
